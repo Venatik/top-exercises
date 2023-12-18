@@ -1,6 +1,6 @@
 const admitGuests = [];
 const rejectGuests = [];
-const guestList = ["Bob", "Phil", "Lola", "Liz", "Anne"];
+const guestList = ["Bob", "Phil", "Lola", "Liz", "Anne", "Stefan", "Ivan"];
 
 let admit = document.getElementById("admit");
 let reject = document.getElementById("reject");
