@@ -18,70 +18,45 @@ function getComputerChoice() {
     }
 }
 
-// console.log(getComputerChoice());
-// result.innerText = getComputerChoice();
-
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
-        // result.innerHTML += "It's a tie!<br>";
         return "It's a tie!";
     }
     else if (playerSelection === "Rock" && computerSelection === "Paper") {
-        // result.innerHTML += "You lose! Paper beats Rock<br>";
         return "You lose! Paper beats Rock";
     }
     else if (playerSelection === "Rock" && computerSelection === "Scissors") {
-        // result.innerHTML += "You win! Rock beats Scissors<br>";
         return "You win! Rock beats Scissors";
     }
     else if (playerSelection === "Paper" && computerSelection === "Rock") {
-        // result.innerHTML += "You win! Paper beats Rock<br>";
         return "You win! Paper beats Rock";
     }
     else if (playerSelection === "Paper" && computerSelection === "Scissors") {
-        // result.innerHTML += "You lose! Scissors beats Paper<br>";
         return "You lose! Scissors beats Paper";
     }
     else if (playerSelection === "Scissors" && computerSelection === "Rock") {
-        // result.innerHTML += "You lose! Rock beats Scissors<br>";
         return "You lose! Rock beats Scissors";
     }
     else if (playerSelection === "Scissors" && computerSelection === "Paper") {
-        // result.innerHTML += "You win! Scissors beats Paper<br>";
         return "You win! Scissors beats Paper";
     }
 }
-
-// btnRock.addEventListener("click", () => {
-//     result.innerText = playRound("Rock", getComputerChoice());
-// });
 
 btnRock.addEventListener("click", () => {
     game("Rock");
 });
 
-// btnPaper.addEventListener("click", () => {
-//     result.innerText = playRound("Paper", getComputerChoice());
-// });
-
 btnPaper.addEventListener("click", () => {
     game("Paper");
 });
-
-// btnScissors.addEventListener("click", () => {
-//     result.innerText = playRound("Scissors", getComputerChoice());
-// });
 
 btnScissors.addEventListener("click", () => {
     game("Scissors");
 });
 
-// console.log(playRound("Rock", getComputerChoice()));
-
 function game(playerSelection) {
     let computerSelection = getComputerChoice();
     let round = playRound(playerSelection, computerSelection);
-    // console.log(round);
     if (round.includes("win")) {
         playerScore++;
         result.innerHTML += `You win! ${playerSelection} beats ${computerSelection}<br>`;
@@ -128,6 +103,3 @@ function countdown(seconds) {
         }
     }, 1000)
 }
-
-// console.log(game());
-
